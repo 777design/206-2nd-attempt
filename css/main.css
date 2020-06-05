@@ -14,6 +14,7 @@ body {
 .container{
 	max-width: 1200px;
 	margin: 0 auto;
+	width: 90%;
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -55,12 +56,14 @@ header {
 	justify-content: center;
 	align-items: center;
 	flex-flow: row wrap;
+	width: 100%;
 }
 
 header h1 {
 	margin: 0;
 	padding: 38px 0;
 	border-bottom: #77a466 3px solid;
+	text-align: center;
 }
 header h1 span {
 	color: #77a466;
@@ -123,15 +126,11 @@ header nav ul li a{
 .section-three {
 	height: auto;
 	border-top: 1px solid #eee;
+	width: 100%;
 }
 
 .section-one h4 {
 	padding: 10px 0;
-}
-
-.section-two {
-	border-left: 1px solid #eee;
-	border-right: 1px solid #eee;
 }
 
 .section-two h4,
@@ -174,4 +173,35 @@ footer span {
 	text-transform: lowercase;
 	color: #77a466;
 	font-size: 0.9em;
+}
+
+/***breakpoints***/
+
+@media all and (min-width: 768px){
+	/*tablet styles*/
+	header h1{
+		width: 100%;
+		text-align: center;
+	}
+	.bottom-section{
+		flex-flow:row wrap;
+	}
+	.section-one,
+	.section-two,
+	.section-three{
+		width: 33%;
+	}
+}
+
+@media all and (min-width: 1200px){
+	/*desktop styles*/
+	header h1{
+		display: flex;
+		flex-flow: row wrap;
+		border-bottom: 0px;
+	}
+	header nav ul {
+		display: flex;
+		justify-content: space-between;
+	}
 }
